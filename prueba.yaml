@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: prueba
+spec:
+  containers:
+  - name: prueba
+    image: clientes-app:latest  # Asegúrate de que coincida con el nombre de tu imagen
+    imagePullPolicy: Never      # Esto indica a Kubernetes que use la imagen local
+    command: ["python3", "-c", "import tkinter; print('Tkinter importado correctamente')"]
